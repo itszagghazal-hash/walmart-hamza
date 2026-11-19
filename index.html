@@ -1,209 +1,427 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Exclusive Offer | Walmart Deal</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f7f7f7">
+
+<title>Target $750 Reward</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
 <style>
-  @import url("https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap");
-  * { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --red: #cc0000;
+  --red-dark: #a90000;
+  --ink: #171717;
+  --muted: #666;
+  --line: #e7e7e7;
+  --background: #f7f7f7;
+}
 
-  body {
-    font-family: "Figtree", "Helvetica Neue", Arial, sans-serif;
-    background: #f4f8fc;
-    color: #17253a;
-    line-height: 1.5;
-  }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
+body {
+  font-family: "Figtree", Arial, sans-serif;
+  background: var(--background);
+  color: var(--ink);
+  line-height: 1.5;
+}
+
+main {
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 32px 20px 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* BRAND */
+
+.brand {
+  text-align: center;
+}
+
+.brand img {
+  height: 75px;
+  width: auto;
+  max-width: 220px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+/* HEADER */
+
+header h1 {
+  font-size: 29px;
+  line-height: 1.2;
+  text-align: center;
+  font-weight: 800;
+  color: var(--ink);
+}
+
+header h1 span {
+  color: var(--red);
+}
+
+.sub {
+  text-align: center;
+  color: var(--muted);
+  margin-top: 10px;
+  font-size: 15px;
+}
+
+/* GIFT CARD */
+
+.card {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  min-height: 215px;
+  padding: 27px 24px;
+  border-radius: 18px;
+  background: linear-gradient(
+    135deg,
+    #b90000 0%,
+    #e00000 55%,
+    #f02626 100%
+  );
+  box-shadow: 0 9px 25px rgba(204,0,0,.19);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  text-align: center;
+  color: white;
+}
+
+/* Decorative circles */
+
+.card::before,
+.card::after {
+  content: "";
+  position: absolute;
+  border: 1px solid rgba(255,255,255,.17);
+  border-radius: 50%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.card::before {
+  width: 230px;
+  height: 230px;
+  top: -135px;
+  right: -65px;
+}
+
+.card::after {
+  width: 180px;
+  height: 180px;
+  bottom: -125px;
+  left: -60px;
+}
+
+.gift-icon img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  display: block;
+}
+.card .label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: rgba(255,255,255,.88);
+}
+
+.card .value {
+  font-size: 55px;
+  line-height: 1.15;
+  font-weight: 800;
+  letter-spacing: -2px;
+  color: #fff;
+}
+
+.card .card-footer {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  color: rgba(255,255,255,.85);
+  margin-top: 6px;
+}
+
+/* CTA BUTTON */
+
+.btn {
+  display: block;
+  width: 100%;
+  padding: 17px 20px;
+  border: none;
+  border-radius: 9px;
+  background: var(--red);
+  color: #fff;
+  font-size: 17px;
+  font-weight: 800;
+  font-family: inherit;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(204,0,0,.15);
+  transition: background .2s ease, transform .2s ease;
+}
+
+.btn:hover {
+  background: var(--red-dark);
+  transform: translateY(-2px);
+}
+
+.btn:focus-visible {
+  outline: 3px solid #171717;
+  outline-offset: 3px;
+}
+
+/* SECTIONS */
+
+section h2 {
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: 13px;
+  color: var(--ink);
+}
+
+/* HOW IT WORKS */
+
+ol {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+ol li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 11px;
+  padding: 13px 14px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+ol li b {
+  flex: 0 0 29px;
+  width: 29px;
+  height: 29px;
+  border-radius: 50%;
+  background: var(--red);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+
+/* FAQ */
+
+details {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 10px;
+}
+
+summary {
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  color: var(--ink);
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+summary::after {
+  content: "+";
+  font-size: 21px;
+  color: var(--red);
+  font-weight: 500;
+}
+
+details[open] summary::after {
+  content: "−";
+}
+
+details p {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* DISCLOSURE */
+
+.disclosure {
+  text-align: center;
+  color: #777;
+  font-size: 11px;
+  line-height: 1.6;
+  padding: 0 8px;
+}
+
+/* MOBILE */
+
+@media (max-width: 380px) {
   main {
-    max-width: 480px;
-    margin: 0 auto;
-    padding: 32px 20px 48px;
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
+    padding: 25px 16px 35px;
   }
 
-  .brand { text-align: center; }
-  .brand img {
-    height: 48px;
-    width: auto;
-    display: block;
-    margin: 0 auto;
-  }
-
-  h1 {
-    font-size: 28px;
-    line-height: 1.2;
-    text-align: center;
-    color: #17253a;
-  }
-
-  h1 span { color: #0071ce; }
-
-  .sub {
-    text-align: center;
-    color: #526477;
-  }
-
-  .card {
-    background: #ffffff;
-    border: 1px solid #d8e5f2;
-    border-radius: 14px;
-    padding: 24px;
-    box-shadow: 0 3px 14px rgba(0,113,206,.08);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 6px;
-    text-align: center;
-  }
-
-  .card .label {
-    font-size: 14px;
-    color: #526477;
+  header h1 {
+    font-size: 26px;
   }
 
   .card .value {
-    font-size: 44px;
-    font-weight: 800;
-    color: #17253a;
+    font-size: 49px;
   }
+}
+</style>
+</head>
 
-  .btn {
-    display: block;
-    width: 100%;
-    padding: 16px;
-    border: 0;
-    border-radius: 8px;
-    background: #0071ce;
-    color: #ffffff;
-    font-size: 17px;
-    font-weight: 700;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    transition: background .2s ease, transform .2s ease;
-  }
-
-  .btn:hover {
-    background: #005da8;
-    transform: translateY(-1px);
-  }
-
-  .btn:focus-visible {
-    outline: 3px solid #ffc220;
-    outline-offset: 3px;
-  }
-
-  h2 {
-    font-size: 20px;
-    margin-bottom: 12px;
-    color: #17253a;
-  }
-
-  ol {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  ol li {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    background: #ffffff;
-    border: 1px solid #d8e5f2;
-    padding: 12px 14px;
-    border-radius: 10px;
-    font-family: "Figtree", "Helvetica Neue", Arial, sans-serif;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 1.45;
-  }
-
-  ol li b {
-    flex: none;
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
-    background: #ffc220;
-    color: #17253a;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 14px;
-  }
-
-  details {
-    background: #ffffff;
-    border: 1px solid #d8e5f2;
-    border-radius: 10px;
-    padding: 14px;
-    margin-bottom: 10px;
-  }
-
-  summary {
-    font-family: "Figtree", "Helvetica Neue", Arial, sans-serif;
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 1.4;
-    cursor: pointer;
-    color: #17253a;
-  }
-
-  details p {
-    font-family: "Figtree", "Helvetica Neue", Arial, sans-serif;
-    margin-top: 8px;
-    color: #526477;
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 1.6;
-  }
-</style></head>
 <body>
-<main>
-  <div class="brand"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Walmart_Logo.png" alt="Walmart logo" style="height:48px;width:auto;max-width:220px;display:block;margin:0 auto"></div>
 
+<main>
+
+  <!-- TARGET BRAND REFERENCE -->
+  <div class="brand">
+    <img
+      src="https://corporate.target.com/getmedia/0289d38f-1bb0-48f9-b883-cd05e19b8f98/Target_Bullseye-Logo_Red_transparent.png?width=620"
+      alt="Target logo"
+    >
+  </div>
+
+  <!-- MAIN HEADING -->
   <header>
-    <h1>Claim Your <span>$750</span> Walmart
-Discount Today.</h1>
-    <p class="sub">Your $750 Discount is waiting&mdash;tap below to claim it!</p>
+    <h1>
+      Claim Your
+      <span>$750</span>
+      Target Gift Card.
+    </h1>
+
+    <p class="sub">
+      Get ready for the holidays with Target shopping inspiration for books, games, music, and more <p class="sub"> find something for everyone on your list.
+
+    </p>
   </header>
 
-  <section class="card" aria-label="Reward">
-    <span class="label">Digital Reward &middot; Reward Value</span>
-    <span class="value">$750</span>
+  <!-- DIGITAL REWARD CARD PREVIEW -->
+  <section class="card" aria-label="Promotional reward preview">
+
+<div class="gift-icon">
+  <img src="https://corporate.target.com/getmedia/b9f3854d-7831-4d4f-a45d-c8ce3df1ff2e/Target_Bullseye-Logo_White_transparent.png?width=620" alt="Gift icon">
+</div>
+    <span class="label">
+      TARGET GIFT CARD
+    </span>
+
+    <span class="value">
+      $750
+    </span>
+
+    <span class="card-footer">
+ENJOY SHOPPING AT TARGET    </span>
+
   </section>
 
-  <a class="btn" href="https://linkthem.net/?offer_id=1405&aff_id=181591" target="_blank" rel="noopener sponsored">Continue to Next Step</a>
+  <!-- CTA -->
+  <a
+    class="btn"
+    href="https://giftclick.org/?offer_id=1324&aff_id=181591"
+    target="_blank"
+    rel="noopener sponsored"
+  >
+    Continue to Next Step →
+  </a>
 
+  <!-- HOW IT WORKS -->
   <section>
+
     <h2>How It Works</h2>
+
     <ol>
-      <li><b>1</b> Click &ldquo;Continue to Next Step&rdquo;</li>
-      <li><b>2</b> Enter your email</li>
-      <li><b>3</b> Complete 5+ Deals to Unlock more rewards</li>
-      <li><b>4</b> Claim your reward</li>
+      <li>
+        <b>1</b>
+        Click "Continue to Next Step"
+      </li>
+
+      <li>
+        <b>2</b>
+        Enter your email
+      </li>
+
+      <li>
+        <b>3</b>
+        Complete 5+ Deals to Unlock more rewards
+      </li>
+
+      <li>
+        <b>4</b>
+        Claim your GIFT Card
+      </li>
     </ol>
+
   </section>
 
+  <!-- FAQ -->
   <section>
+
     <h2>Frequently Asked Questions</h2>
+
     <details>
       <summary>What are deals?</summary>
-      <p>Simple tasks like app downloads, surveys, or trial subscriptions. Each deal is straightforward and designed to be completed quickly.</p>
+      <p>
+        Simple tasks like app downloads, surveys, or trial subscriptions. Each deal is straightforward and designed to be completed quickly.
+      </p>
     </details>
+
     <details>
       <summary>How many do I need?</summary>
-      <p>Complete 5+ deals to receive your reward. The more deals you complete, the faster you can receive your discount code.</p>
+      <p>
+        Complete 2-5 deals to receive your reward. The more deals you complete, the faster you can receive your discount code.
+      </p>
     </details>
+
     <details>
       <summary>How long do they take?</summary>
-      <p>Typically 10-20 minutes per deal. Most users complete all required deals within a few hours, spread across a day or two.</p>
+      <p>
+        Typically 10-20 minutes per deal. Most users complete all required deals within a few hours, spread across a day or two.
+      </p>
     </details>
+
   </section>
+
+  <!-- TRANSPARENCY -->
+ 
+
 </main>
+
 </body>
 </html>
