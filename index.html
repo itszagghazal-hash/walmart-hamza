@@ -8,9 +8,10 @@
 
 <title>Target $750 Reward</title>
 
+<!-- INTER FONT -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 <style>
 :root {
@@ -26,13 +27,24 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: "Inter", sans-serif;
+}
+
+html {
+  font-family: "Inter", sans-serif;
 }
 
 body {
-  font-family: "Figtree", Arial, sans-serif;
+  font-family: "Inter", sans-serif;
   background: var(--background);
   color: var(--ink);
-  line-height: 1.5;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button, a, input, select, textarea {
+  font-family: "Inter", sans-serif;
 }
 
 main {
@@ -64,10 +76,11 @@ main {
 
 header h1 {
   font-size: 29px;
-  line-height: 1.2;
+  line-height: 1.25;
   text-align: center;
   font-weight: 800;
   color: var(--ink);
+  letter-spacing: -0.8px;
 }
 
 header h1 span {
@@ -79,6 +92,8 @@ header h1 span {
   color: var(--muted);
   margin-top: 10px;
   font-size: 15px;
+  font-weight: 400;
+  line-height: 1.6;
 }
 
 /* GIFT CARD */
@@ -105,8 +120,6 @@ header h1 span {
   text-align: center;
   color: white;
 }
-
-/* Decorative circles */
 
 .card::before,
 .card::after {
@@ -138,6 +151,7 @@ header h1 span {
   object-fit: contain;
   display: block;
 }
+
 .card .label {
   font-size: 11px;
   font-weight: 700;
@@ -172,8 +186,7 @@ header h1 span {
   background: var(--red);
   color: #fff;
   font-size: 17px;
-  font-weight: 800;
-  font-family: inherit;
+  font-weight: 700;
   text-align: center;
   text-decoration: none;
   cursor: pointer;
@@ -195,9 +208,10 @@ header h1 span {
 
 section h2 {
   font-size: 20px;
-  font-weight: 800;
+  font-weight: 700;
   margin-bottom: 13px;
   color: var(--ink);
+  letter-spacing: -0.4px;
 }
 
 /* HOW IT WORKS */
@@ -219,6 +233,7 @@ ol li {
   padding: 13px 14px;
   font-size: 15px;
   font-weight: 500;
+  line-height: 1.5;
 }
 
 ol li b {
@@ -232,6 +247,7 @@ ol li b {
   align-items: center;
   justify-content: center;
   font-size: 14px;
+  font-weight: 700;
 }
 
 /* FAQ */
@@ -275,7 +291,8 @@ details p {
   margin-top: 10px;
   color: var(--muted);
   font-size: 14px;
-  line-height: 1.6;
+  font-weight: 400;
+  line-height: 1.7;
 }
 
 /* DISCLOSURE */
@@ -310,7 +327,7 @@ details p {
 
 <main>
 
-  <!-- TARGET BRAND REFERENCE -->
+  <!-- TARGET BRAND -->
   <div class="brand">
     <img
       src="https://corporate.target.com/getmedia/0289d38f-1bb0-48f9-b883-cd05e19b8f98/Target_Bullseye-Logo_Red_transparent.png?width=620"
@@ -327,27 +344,28 @@ details p {
     </h1>
 
     <p class="sub">
-      Get ready for the holidays with Target shopping inspiration for books, games, music, and more <p class="sub"> find something for everyone on your list.
-
+      Get ready for the holidays with Target shopping inspiration for books, games, music, and more.
+      Find something for everyone on your list.
     </p>
   </header>
 
-  <!-- DIGITAL REWARD CARD PREVIEW -->
+  <!-- REWARD CARD -->
   <section class="card" aria-label="Promotional reward preview">
 
-<div class="gift-icon">
-  <img src="https://corporate.target.com/getmedia/b9f3854d-7831-4d4f-a45d-c8ce3df1ff2e/Target_Bullseye-Logo_White_transparent.png?width=620" alt="Gift icon">
-</div>
-    <span class="label">
-      TARGET GIFT CARD
-    </span>
+    <div class="gift-icon">
+      <img
+        src="https://corporate.target.com/getmedia/b9f3854d-7831-4d4f-a45d-c8ce3df1ff2e/Target_Bullseye-Logo_White_transparent.png?width=620"
+        alt="Target logo"
+      >
+    </div>
 
-    <span class="value">
-      $750
-    </span>
+    <span class="label">TARGET GIFT CARD</span>
+
+    <span class="value">$750</span>
 
     <span class="card-footer">
-ENJOY SHOPPING AT TARGET    </span>
+      ENJOY SHOPPING AT TARGET
+    </span>
 
   </section>
 
@@ -398,14 +416,16 @@ ENJOY SHOPPING AT TARGET    </span>
     <details>
       <summary>What are deals?</summary>
       <p>
-        Simple tasks like app downloads, surveys, or trial subscriptions. Each deal is straightforward and designed to be completed quickly.
+        Simple tasks like app downloads, surveys, or trial subscriptions.
+        Each deal is straightforward and designed to be completed quickly.
       </p>
     </details>
 
     <details>
       <summary>How many do I need?</summary>
       <p>
-        Complete 2-5 deals to receive your reward. The more deals you complete, the faster you can receive your discount code.
+        Complete 2-5 deals to receive your reward.
+        The more deals you complete, the faster you can receive your discount code.
       </p>
     </details>
 
@@ -417,9 +437,6 @@ ENJOY SHOPPING AT TARGET    </span>
     </details>
 
   </section>
-
-  <!-- TRANSPARENCY -->
- 
 
 </main>
 
